@@ -1,0 +1,7 @@
+.venv/
+__pycache__
+.prettierrc
+tk.py
+tk2.py
+test.py
+requirements.txt
