@@ -13,36 +13,61 @@ font = ("Helvetica", 30)
 # label.pack(pady=10)
 def risultato(ris):
     output_ris = tk.Label(
-        window, text="00000000000000000000000", fg="#000000", font=font)
+        window, text="00000000000000001", background="#FFFFFF", fg="#FFFFFF", font=font)
     output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
-    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
+    output_ris = tk.Label(window, text=ris, fg="#0000FF",
+                          background="#FFFFFF", font=font)
     output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
 
 
 def somma():
-    num1 = int(input_num1.get())
-    num2 = int(input_num2.get())
+    try:
+        num1 = int(input_num1.get())
+    except ValueError:
+        num1 = 0
+    try:
+        num2 = int(input_num2.get())
+    except ValueError:
+        num2 = 0
     ris = num1+num2
     risultato(ris)
 
 
 def sottrazione():
-    num1 = int(input_num1.get())
-    num2 = int(input_num2.get())
+    try:
+        num1 = int(input_num1.get())
+    except ValueError:
+        num1 = 0
+    try:
+        num2 = int(input_num2.get())
+    except ValueError:
+        num2 = 0
     ris = num1-num2
     risultato(ris)
 
 
 def moltiplicazione():
-    num1 = int(input_num1.get())
-    num2 = int(input_num2.get())
+    try:
+        num1 = int(input_num1.get())
+    except ValueError:
+        num1 = 0
+    try:
+        num2 = int(input_num2.get())
+    except ValueError:
+        num2 = 0
     ris = num1*num2
     risultato(ris)
 
 
 def divisione():
-    num1 = int(input_num1.get())
-    num2 = int(input_num2.get())
+    try:
+        num1 = int(input_num1.get())
+    except ValueError:
+        num1 = 0
+    try:
+        num2 = int(input_num2.get())
+    except ValueError:
+        num2 = 0
     if num2 == 0:
         if num1 == 0:
             ris = "INDEFINITO"
