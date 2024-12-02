@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from PIL import ImageTk, Image
 
 window = tk.Tk()
 window.title("Finestra di prova")
