@@ -11,29 +11,33 @@ font = ("Helvetica", 30)
 
 # label = tk.Label(window, text="CALCOLATRICE")
 # label.pack(pady=10)
+def risultato(ris):
+    output_ris = tk.Label(
+        window, text="00000000000000000000000", fg="#000000", font=font)
+    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
+    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+
 
 def somma():
     num1 = int(input_num1.get())
     num2 = int(input_num2.get())
     ris = num1+num2
-    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    risultato(ris)
 
 
 def sottrazione():
     num1 = int(input_num1.get())
     num2 = int(input_num2.get())
     ris = num1-num2
-    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    risultato(ris)
 
 
 def moltiplicazione():
     num1 = int(input_num1.get())
     num2 = int(input_num2.get())
     ris = num1*num2
-    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    risultato(ris)
 
 
 def divisione():
@@ -46,8 +50,7 @@ def divisione():
             ris = "IMPOSSIBILE"
     else:
         ris = round((num1/num2), 2)
-    output_ris = tk.Label(window, text=ris, fg="#0000FF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    risultato(ris)
 
 
 input_num1 = tk.Entry(window)
