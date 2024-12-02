@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from tkinter import messagebox
 from PIL import ImageTk, Image
 
 window = tk.Tk()
@@ -11,8 +12,9 @@ bg_color = "lightblue"
 font = ("Helvetica", 30)
 font2 = ("Helvetica", 20)
 
-background_image = tk.PhotoImage("image.png")
-background_label = tk.Label(parent, image=background_image)
+background_image = tk.PhotoImage(
+    file="/home/its/Desktop/PYTHON/Python2/Calcolatrice/image.png")
+background_label = tk.Label(window, image=background_image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 # label = tk.Label(window, text="CALCOLATRICE")
