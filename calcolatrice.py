@@ -4,9 +4,9 @@ from tkinter import messagebox
 from PIL import ImageTk, Image
 
 window = tk.Tk()
-window.title("Finestra di prova")
+window.title("Calcolatrice")
 window.geometry("600x600")
-window.resizable(True, True)
+window.resizable(False, False)
 window.configure(background="purple")
 bg_color = "lightblue"
 font = ("Helvetica", 30)
