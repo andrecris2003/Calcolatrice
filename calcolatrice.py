@@ -7,17 +7,19 @@ window.resizable(True, True)
 window.configure(background="purple")
 bg_color = "lightblue"
 font = ("Helvetica", 30)
-
+font2 = ("Helvetica", 20)
 
 # label = tk.Label(window, text="CALCOLATRICE")
 # label.pack(pady=10)
+
+
 def risultato(ris):
     output_ris = tk.Label(
         window, text="00000000000000001", background="#FFFFFF", fg="#FFFFFF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    output_ris.grid(row=3, column=0, columnspan=4, sticky="NWE", padx=(100, 0))
     output_ris = tk.Label(window, text=ris, fg="#0000FF",
                           background="#FFFFFF", font=font)
-    output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    output_ris.grid(row=3, column=0, columnspan=4, sticky="N", padx=(100, 0))
 
 
 def somma():
@@ -78,28 +80,31 @@ def divisione():
     risultato(ris)
 
 
+titolo = tk.Label(window, text="CALCOLATRICE",
+                  background="white", fg="blue", font=font)
+titolo.grid(row=0, column=0, columnspan=4,
+            sticky="NWE", pady=(30, 0), padx=(100, 0))
 output_ris = tk.Label(
-    window, text="10000andrea000001", background="#FFFFFF", fg="#FFFFFF", font=font)
-output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    window, text="100000andrea000001", background="#FFFFFF", fg="#FFFFFF", font=font)
+output_ris.grid(row=3, column=0, columnspan=4, sticky="NWE", padx=(100, 0))
 output_ris = tk.Label(
-    window, text="risultato", background="#FFFFFF", fg="#0000FF", font=font)
-output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+    window, text="risultato", background="#FFFFFF", fg="#0000FF", font=font2)
+output_ris.grid(row=3, column=0, columnspan=4, sticky="NS", padx=(100, 0))
 
 input_num1 = tk.Entry(window)
-input_num1.grid(row=0, column=0, columnspan=2, sticky="N")
+input_num1.grid(row=1, column=0, columnspan=2, sticky="NWE", padx=(100, 0))
 
 input_num2 = tk.Entry(window)
-input_num2.grid(row=0, column=2, columnspan=2, sticky="N")
+input_num2.grid(row=1, column=2, columnspan=2, sticky="NWE")
 
 pulsante1 = tk.Button(text="+", command=somma)
-pulsante1.grid(row=1, column=0, sticky="NSEW")
+pulsante1.grid(row=2, column=0, sticky="NWE", padx=(100, 0))
 pulsante2 = tk.Button(text="-", command=sottrazione)
-pulsante2.grid(row=1, column=1, sticky="NSEW")
+pulsante2.grid(row=2, column=1, sticky="NWE")
 pulsante3 = tk.Button(text="x", command=moltiplicazione)
-pulsante3.grid(row=1, column=2, sticky="NSEW")
+pulsante3.grid(row=2, column=2, sticky="NWE")
 pulsante4 = tk.Button(text=":", command=divisione)
-pulsante4.grid(row=1, column=3, sticky="NSEW")
-
+pulsante4.grid(row=2, column=3, sticky="NWE")
 
 if __name__ == "__main__":
     window.mainloop()
