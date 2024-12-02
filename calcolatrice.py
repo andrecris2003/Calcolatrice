@@ -78,6 +78,13 @@ def divisione():
     risultato(ris)
 
 
+output_ris = tk.Label(
+    window, text="10000andrea000001", background="#FFFFFF", fg="#FFFFFF", font=font)
+output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+output_ris = tk.Label(
+    window, text="risultato", background="#FFFFFF", fg="#0000FF", font=font)
+output_ris.grid(row=2, column=0, columnspan=4, sticky="N")
+
 input_num1 = tk.Entry(window)
 input_num1.grid(row=0, column=0, columnspan=2, sticky="N")
 
